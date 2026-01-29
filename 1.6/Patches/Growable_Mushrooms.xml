@@ -6,8 +6,10 @@
 		<success>Normal</success>
 		<operations>
 
-	<!-- Glowstool -->
-		
+	<!-- Core -->
+				
+			<!-- Glowstool -->
+			
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "Glowstool"]/plant</xpath>
 				<value>
@@ -41,7 +43,7 @@
 				</value>
 			</li>
 
-	<!-- Agarilux -->
+			<!-- Agarilux -->
 
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "Agarilux"]/plant</xpath>
@@ -74,14 +76,72 @@
 					</sowResearchPrerequisites>
 				</value>
 			</li>
-			
-	<!-- Timbershroom -->
+
+			<!-- Timbershroom -->
 				
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant</xpath>
 				<value>
 					<interferesWithRoof>false</interferesWithRoof>
 					<mustBeWildToSow>false</mustBeWildToSow>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Plant_Timbershroom"]/plant/mustBePermanentDarknessToSow</xpath>
+				<value>
+					<mustBePermanentDarknessToSow>false</mustBePermanentDarknessToSow>
+				</value>
+			</li>
+			
+	<!-- Odyssey DLC -->
+	
+			<!-- Boomshroom -->
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Boomshroom"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+						<li>Hydroponic</li>
+					</sowTags>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+				  <xpath>/Defs/ThingDef[defName = "Boomshroom"]/plant/growDays</xpath>
+				  <value>
+					  <growDays>12.5</growDays>
+				  </value>
+			</li>
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Boomshroom"]/plant</xpath>
+				<value>
+					<sowResearchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</sowResearchPrerequisites>
+				</value>
+			</li>
+			
+			<!-- Plant_Psilocap -->
+			
+			<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_Psilocap"]/plant</xpath>
+				<value>
+					<sowTags>
+						<li>Ground</li>
+						<li>Hydroponic</li>
+					</sowTags>
+				</value>
+			</li>
+			
+			<li MayRequire="ReGrowth.BOTR.Core" Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Plant_Psilocap"]/plant</xpath>
+				<value>
+					<sowResearchPrerequisites>
+						<li>RG_MushroomCultivation</li>
+					</sowResearchPrerequisites>
 				</value>
 			</li>
 
